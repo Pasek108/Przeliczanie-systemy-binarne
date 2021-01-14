@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Przeliczanie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="theme-color" content="##2c2c2c">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div id="logo" class="logo">
+            <div id="logo_txt" class="logo_txt">
+                Przeliczanie
+            </div>
+        </div>
+        <div class="tryb">
+            <div class="przelacznik">
+                <i class="fas fa-sun"></i>
+                <div id="slider" class="slider">
+                    <div id="tryb" class="jasny"></div>
+                </div>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <p>
+            Przy liczbach binarnych jest znak i moduł, czyli do pierwszego inputa wpisujesz pierwszy znak znak a reszte
+            do
+            drugiego:<br>
+            10001110 wpisujesz [1][0001110]<br><br>
+            Nie wiem jak ma być z więcej niż 8 bitami, czy uzupełnić do 16 bitów tak jak tutaj uzupełniam do 8 bitów,
+            czy po prostu dołożyć bit więc dokładam jeden.<br>
+            Jak potrzeba inaczej to dopiszesz sobie zera za pierwszym bitem:<br>
+            Np. -200 to <span style="color: red">1</span>11001000 (200 zajmuje 8 bitów, dodatkowy pierwszy bit to znak)
+            i uzupełnisz do 16 czyli 1000000011001000
+        </p><br>
+
+        <label for="system_in">Przelicz z:</label>
+        <select id="system_in">
+            <option value="dec">Dec</option>
+            <option value="zm">ZM</option>
+            <option value="zu1">ZU1</option>
+            <option value="zu2">ZU2</option>
+        </select>
+
+        <label for="system_out">Na:</label>
+        <select id="system_out">
+            <option value="dec">Dec</option>
+            <option value="zm">ZM</option>
+            <option value="zu1">ZU1</option>
+            <option value="zu2">ZU2</option>
+        </select>
+
+        <form id="form" onsubmit="return false;">
+            <br>
+            <div id="pole_in">
+
+            </div>
+            <br>
+            <div id="pole_out">
+
+            </div>
+        </form>
+    </main>
+
+    <footer id="footer">
+        Artur Pas 2021
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
